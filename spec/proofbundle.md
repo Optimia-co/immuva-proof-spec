@@ -1,161 +1,176 @@
 # Immuva ProofBundle Specification
-
-## Overview
-
-An Immuva ProofBundle is a deterministic, verifiable container
-that encapsulates cryptographic evidence of autonomous actions.
-
-A ProofBundle is self-contained and verifiable without access
-to Immuva infrastructure.
+Version: 1.0  
+Status: **Normative**  
+Last updated: 2026-01-30
 
 ---
 
-## Design Goals
+## 1. Scope
 
-- Deterministic verification
-- Offline auditability
-- Minimal data exposure
-- Tamper evidence
-- Zero-trust verification
+This document defines the **normative specification** for the Immuva ProofBundle format.
 
----
+A ProofBundle is a **self-contained, deterministic, cryptographically verifiable evidence package** designed to prove that an autonomous system action occurred.
 
-## Bundle Forms
-
-A ProofBundle MAY be:
-
-- a directory
-- a deterministic ZIP archive (`.proofbundle`)
-
-Both forms MUST produce identical verification results.
+This specification is implementation-agnostic.
 
 ---
 
-## Directory Structure
+## 2. Design Goals
+
+A compliant ProofBundle MUST be:
+
+- Self-contained (no external dependency required for verification)
+- Deterministic (byte-for-byte reproducible)
+- Cryptographically verifiable
+- Tamper-evident
+- Offline-verifiable
+
+---
+
+## 3. Canonical Structure
+
+A ProofBundle MUST be either:
+- a directory, or
+- a deterministic ZIP archive
+
+With the following canonical structure:
 
 proofbundle/
 ├── events.jsonl
 ├── hashes.json
 ├── signature.json
+├── anchor.json (optional)
+├── redaction_report.json (optional)
 └── artifacts/ (optional)
 
 yaml
 Copier le code
 
----
-
-## events.jsonl
-
-Append-only list of events in JSON Lines format.
-
-Each event MUST include:
-- `event_id`
-- `timestamp`
-- `type`
-- `data_hash`
-- `prev_event_hash`
-
-Events MUST be chained by `prev_event_hash`.
-
-Any modification invalidates the entire chain.
+File names and paths are **case-sensitive**.
 
 ---
 
-## hashes.json
+## 4. events.jsonl (Event Chain)
 
-List of files included in the bundle with their integrity metadata.
+- Append-only
+- One JSON object per line
+- Each event MUST include:
+  - timestamp
+  - event_type
+  - payload_hash
+  - previous_event_hash
 
-Each entry MUST include:
-- `path`
-- `sha256`
-- `size`
+Events MUST be cryptographically chained.
 
-All files except `signature.json` MUST be listed.
-
----
-
-## signature.json
-
-Cryptographic seal of the ProofBundle.
-
-MUST include:
-- `root_hash`
-- `signature_hex`
-- `algorithm`
-- `proof_level`
-
-OPTIONAL fields:
-- `public_key_hex`
-- `certificate`
-- `anchor`
-- `key_protected`
-
-The signature MUST be computed over the `root_hash`.
+Any modification invalidates the chain.
 
 ---
 
-## Root Hash Computation
+## 5. hashes.json (Integrity Manifest)
 
-The `root_hash` MUST be computed as follows:
+This file MUST list:
 
-1. Deterministically order `hashes.json`
-2. Concatenate entries
-3. Apply SHA-256
+- file path
+- byte size
+- SHA-256 hash
 
-The exact procedure MUST be documented and reproducible.
+All files except `signature.json` MUST be included.
 
----
-
-## Deterministic ZIP Rules
-
-When archived:
-- File order MUST be deterministic
-- Timestamps MUST be zeroed
-- Compression MUST be deterministic
-- No extra metadata allowed
-
-ZIP output MUST be byte-for-byte reproducible.
+Order MUST be lexicographical.
 
 ---
 
-## Verification Algorithm (High Level)
+## 6. Root Hash
 
-Verification MUST perform:
+The root hash is computed as:
 
-1. Event chain validation
-2. File hash verification
-3. Root hash recomputation
-4. Signature verification
-5. Proof level checks
-6. Revocation checks (if applicable)
+root_hash = SHA256(concat(path | size | sha256))
 
-Verification results are binary:
-- valid
-- invalid
-- revoked
+yaml
+Copier le code
+
+This value represents the immutable commitment of the ProofBundle.
 
 ---
 
-## Security Considerations
+## 7. signature.json (Cryptographic Seal)
 
-- ProofBundles do not validate business logic
-- ProofBundles do not prevent omission of actions
-- ProofBundles rely on correct integration
+This file MUST include:
 
-These limitations are explicit and documented.
+- root_hash
+- signature_hex
+- algorithm (Ed25519)
+- public_key_hex
+- created_at
+- proof_level (array)
+
+Optional fields:
+- certificate
+- anchor
+
+The signature MUST cover the root hash.
 
 ---
 
-## Extensibility
+## 8. Proof Levels
 
-Additional artifacts MAY be included
-if they do not affect verification.
+Proof levels indicate assurance strength:
 
-Verification MUST ignore unknown files
-not listed in `hashes.json`.
+| Level | Guarantee |
+|------|----------|
+| VALID | Integrity & immutability |
+| KEY_PROTECTED | Secure signing environment |
+| TIME_ANCHORED | Independent timestamp |
+| CERTIFIED_IMMUVA | Certified identity |
+
+Proof levels MUST be explicitly declared.
 
 ---
 
-## License
+## 9. Deterministic ZIP Requirements
 
-This specification is licensed under Apache 2.0.
+If zipped:
+- No timestamps
+- Stable file ordering
+- Fixed compression
+- Byte-for-byte reproducibility REQUIRED
+
+---
+
+## 10. Verification
+
+Verification MUST:
+
+1. Recompute file hashes
+2. Recompute root hash
+3. Verify signature
+4. Verify event chain
+5. Validate proof levels
+6. Enforce revocation (if applicable)
+
+Verification is deterministic.
+
+---
+
+## 11. Security Model
+
+ProofBundles provide:
+
+- Integrity
+- Non-repudiation
+- Temporal ordering
+
+They do NOT:
+- Validate business logic
+- Prevent incorrect decisions
+- Detect omitted actions
+
+---
+
+## 12. Conformance
+
+An implementation is compliant if it produces ProofBundles that satisfy all MUST requirements in this document.
+
+---
+
+End of specification.
