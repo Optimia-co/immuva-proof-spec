@@ -1,0 +1,10 @@
+{
+  "action_id": "act_0009_A",
+  "violations": [
+    {
+      "code": "FSM_CROSS_ACTION_ID",
+      "message": "multiple action_id values observed",
+      "event_id": "evt_0009_2"
+    }
+  ]
+}

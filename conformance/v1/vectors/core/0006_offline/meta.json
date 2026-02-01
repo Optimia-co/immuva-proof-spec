@@ -1,0 +1,16 @@
+{
+  "id": "0006",
+  "name": "offline-verdict",
+  "profile": "core",
+  "spec_version": "v1.0.0",
+  "references": [
+    "U",
+    "T",
+    "S"
+  ],
+  "description": "V\u00e9rification offline stricte: verdict_offline.json attendu.",
+  "driver": "verify",
+  "args": [
+    "--offline"
+  ]
+}

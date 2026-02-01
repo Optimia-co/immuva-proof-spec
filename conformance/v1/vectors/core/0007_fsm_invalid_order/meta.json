@@ -1,0 +1,9 @@
+{
+  "id": "0007",
+  "name": "fsm-invalid-order",
+  "profile": "core",
+  "spec_version": "v1.0.0",
+  "references": ["J"],
+  "driver": "fsm",
+  "description": "Finish avant Start => violation FSM_INVALID_ORDER."
+}

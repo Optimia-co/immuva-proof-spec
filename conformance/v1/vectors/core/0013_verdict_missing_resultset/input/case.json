@@ -1,0 +1,7 @@
+{
+  "resultset_present": false,
+  "status": "VALID",
+  "evidence": { "effective": "R1", "required": "R1", "qualified": true },
+  "outcome": { "value": "success", "basis": "R1" },
+  "pointers": { "action_id": "act_0013" }
+}

@@ -1,0 +1,10 @@
+{
+  "id": "0011",
+  "name": "receipt-late-after-non-closable",
+  "profile": "core",
+  "spec_version": "v1.0.0",
+  "driver": "verify",
+  "args": [],
+  "references": ["R"],
+  "description": "Reject receipts appended after a NON_CLOSABLE marker."
+}

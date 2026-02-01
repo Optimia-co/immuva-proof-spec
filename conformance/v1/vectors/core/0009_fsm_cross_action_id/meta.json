@@ -1,0 +1,9 @@
+{
+  "id": "0009",
+  "name": "fsm-cross-action-id",
+  "profile": "core",
+  "spec_version": "v1.0.0",
+  "references": ["J"],
+  "driver": "fsm",
+  "description": "Mix de action_id dans le même flux => violation FSM_CROSS_ACTION_ID."
+}

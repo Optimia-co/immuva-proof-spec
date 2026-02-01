@@ -1,0 +1,1 @@
+{"action_id":"act_0001","event_id":"evt_0001","kind":"test.event","payload":{"a":1,"b":true,"c":"x","d":[3,2,1],"e":{"y":8,"z":9}}}

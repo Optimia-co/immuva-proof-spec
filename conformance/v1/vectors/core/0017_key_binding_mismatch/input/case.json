@@ -1,0 +1,23 @@
+{
+  "resultset_present": true,
+  "evidence": {
+    "effective": "R1",
+    "required": "R1",
+    "qualified": true
+  },
+  "outcome": {
+    "value": "success",
+    "basis": "R1"
+  },
+  "pointers": {
+    "action_id": "act_0017"
+  },
+  "canonical_event": "{\"kind\":\"test.event\",\"event_id\":\"evt_0017\"}",
+  "signing": {
+    "public_key": "pk_0017_A",
+    "signature": "1d24801ed11bd1396f2f598543f096e27075366b9ceaf80573879d176938bcb2"
+  },
+  "key_binding": {
+    "public_key": "pk_0017_B"
+  }
+}

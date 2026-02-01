@@ -1,0 +1,10 @@
+{
+  "id": "0016",
+  "name": "signature-invalid",
+  "profile": "core",
+  "spec_version": "v1.0.0",
+  "driver": "verify",
+  "args": [],
+  "references": ["S"],
+  "description": "Reject invalid signature (sha256(canonical_event) mismatch)."
+}

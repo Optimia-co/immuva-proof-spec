@@ -1,0 +1,18 @@
+{
+  "id": "0005",
+  "name": "verdict-min-valid",
+  "profile": "core",
+  "spec_version": "v1.0.0",
+  "references": [
+    "T",
+    "S",
+    "U",
+    "E4",
+    "O",
+    "J",
+    "K"
+  ],
+  "description": "Bundle valide + ResultSet pr\u00e9sent + \u00e9vidence suffisante => VALID (T-min).",
+  "driver": "verify",
+  "args": []
+}

@@ -1,0 +1,14 @@
+{
+  "id": "0003",
+  "name": "fsm-violations",
+  "profile": "core",
+  "spec_version": "v1.0.0",
+  "references": [
+    "J",
+    "G",
+    "H",
+    "I"
+  ],
+  "description": "FSM: transitions + violations attendues dans expected/violations.json.",
+  "driver": "fsm"
+}

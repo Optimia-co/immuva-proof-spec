@@ -1,0 +1,10 @@
+{
+  "id": "0014",
+  "name": "verdict-basis-mismatch",
+  "profile": "core",
+  "spec_version": "v1.0.0",
+  "references": ["T", "S"],
+  "driver": "verify",
+  "args": [],
+  "description": "Outcome.basis != Evidence.effective => verdict INVALID."
+}

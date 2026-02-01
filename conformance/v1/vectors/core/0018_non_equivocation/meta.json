@@ -1,0 +1,10 @@
+{
+  "id": "0018",
+  "name": "non-equivocation",
+  "profile": "core",
+  "spec_version": "v1.0.0",
+  "driver": "verify",
+  "args": [],
+  "references": ["NE"],
+  "description": "Reject equivocation (multiple distinct canonical events within one action)."
+}

@@ -1,0 +1,8 @@
+{
+  "id": "1002",
+  "name": "policy-disallow-proxy-receipt",
+  "profile": "policies",
+  "spec_version": "v1.0.0",
+  "references": ["P"],
+  "description": "Policy suite: disallow PROXY_RECEIPT (placeholder). Pas de driver tant que policy engine n’est pas implémenté."
+}

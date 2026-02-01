@@ -1,0 +1,10 @@
+{
+  "action_id": "act_0008",
+  "violations": [
+    {
+      "code": "FSM_DOUBLE_FINISH",
+      "message": "multiple finish events observed",
+      "event_id": "evt_0008_3"
+    }
+  ]
+}

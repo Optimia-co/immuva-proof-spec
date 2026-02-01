@@ -1,0 +1,2 @@
+{"kind":"test.start","event_id":"evt_fsm_1","action_id":"act_fsm_1","payload":{"step":"start"}}
+{"kind":"test.finish","event_id":"evt_fsm_2","action_id":"act_fsm_1","payload":{"step":"finish"}}

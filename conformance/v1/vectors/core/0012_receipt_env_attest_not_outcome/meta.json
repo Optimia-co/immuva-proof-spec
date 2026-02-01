@@ -1,0 +1,10 @@
+{
+  "id": "0012",
+  "name": "receipt-env-attest-not-outcome",
+  "profile": "core",
+  "spec_version": "v1.0.0",
+  "driver": "verify",
+  "args": [],
+  "references": ["R"],
+  "description": "ENV_ATTEST cannot be used as outcome basis."
+}

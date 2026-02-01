@@ -1,0 +1,3 @@
+{"kind":"test.start","event_id":"evt_0008_1","action_id":"act_0008","payload":{"step":"start"}}
+{"kind":"test.finish","event_id":"evt_0008_2","action_id":"act_0008","payload":{"step":"finish"}}
+{"kind":"test.finish","event_id":"evt_0008_3","action_id":"act_0008","payload":{"step":"finish-again"}}

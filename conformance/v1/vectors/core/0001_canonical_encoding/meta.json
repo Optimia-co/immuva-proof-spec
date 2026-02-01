@@ -1,0 +1,12 @@
+{
+  "id": "0001",
+  "name": "canonical-encoding-single-event",
+  "profile": "core",
+  "spec_version": "v1.0.0",
+  "references": [
+    "F",
+    "G"
+  ],
+  "description": "Canonicalisation d\u2019un event unique. expected/ contient canonical.bin.sha256 + canonical.json.",
+  "driver": "canonicalize"
+}

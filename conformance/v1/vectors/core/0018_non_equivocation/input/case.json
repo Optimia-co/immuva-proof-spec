@@ -1,0 +1,10 @@
+{
+  "resultset_present": true,
+  "evidence": { "effective": "R1", "required": "R1", "qualified": true },
+  "outcome": { "value": "success", "basis": "R1" },
+  "pointers": { "action_id": "act_0018" },
+  "canonical_events": [
+    "{\"kind\":\"test.event\",\"event_id\":\"evt_0018_A\"}",
+    "{\"kind\":\"test.event\",\"event_id\":\"evt_0018_B\"}"
+  ]
+}

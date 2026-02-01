@@ -1,0 +1,10 @@
+{
+  "id": "0010",
+  "name": "receipt-kind-not-allowed",
+  "profile": "core",
+  "spec_version": "v1.0.0",
+  "driver": "verify",
+  "args": [],
+  "references": ["R"],
+  "description": "Reject unknown receipt kind."
+}

@@ -1,0 +1,9 @@
+{
+  "id": "0008",
+  "name": "fsm-double-finish",
+  "profile": "core",
+  "spec_version": "v1.0.0",
+  "references": ["J"],
+  "driver": "fsm",
+  "description": "Deux finish => violation FSM_DOUBLE_FINISH."
+}

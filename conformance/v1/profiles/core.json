@@ -1,0 +1,8 @@
+{
+  "profile_name": "core",
+  "profile_version": "1.0.0",
+  "spec_version": "v1.0.0",
+  "include": [
+    "vectors/core/**"
+  ]
+}

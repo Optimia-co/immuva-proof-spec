@@ -1,0 +1,8 @@
+{
+  "id": "0101",
+  "name": "tl-inclusion-proof",
+  "profile": "tl",
+  "spec_version": "v1.0.0",
+  "references": ["TL"],
+  "description": "Proof d’inclusion Merkle (placeholder). Pas de driver tant que tl verifier n’est pas implémenté."
+}

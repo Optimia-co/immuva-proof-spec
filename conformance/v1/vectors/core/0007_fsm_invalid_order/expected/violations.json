@@ -1,0 +1,10 @@
+{
+  "action_id": "act_0007",
+  "violations": [
+    {
+      "code": "FSM_INVALID_ORDER",
+      "message": "finish observed before start",
+      "event_id": "evt_0007_2"
+    }
+  ]
+}
