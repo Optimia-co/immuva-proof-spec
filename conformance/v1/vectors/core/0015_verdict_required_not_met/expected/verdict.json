@@ -1,5 +1,5 @@
 {
-  "status": "INVALID",
+  "status": "AWAITING_EVIDENCE",
   "evidence": {
     "effective": "R1",
     "required": "R2",
