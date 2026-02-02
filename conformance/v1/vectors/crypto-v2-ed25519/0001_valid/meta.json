@@ -1,0 +1,4 @@
+{
+  "profile": "crypto-v2-ed25519",
+  "description": "Valid Ed25519 signature over sha256(canonical_event)"
+}

@@ -1,0 +1,10 @@
+{
+  "canonical_event": "{\"action\":\"transfer\",\"amount\":100,\"asset\":\"USD\"}",
+  "signing": {
+    "crypto_suite": "IMMUVAv999-LOL",
+    "signature": "abcd"
+  },
+  "receipts": [],
+  "outcome": { "basis": "RESULTSET" },
+  "resultset_present": true
+}

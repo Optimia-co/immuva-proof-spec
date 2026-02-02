@@ -1,0 +1,4 @@
+{
+  "profile": "crypto-v2-ed25519",
+  "description": "Invalid Ed25519 signature must be rejected"
+}

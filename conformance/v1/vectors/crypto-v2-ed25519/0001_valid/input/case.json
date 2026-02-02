@@ -1,0 +1,13 @@
+{
+  "canonical_event": "{\"action\":\"transfer\",\"amount\":100,\"asset\":\"USD\"}",
+  "signing": {
+    "crypto_suite": "IMMUVAv2-ED25519-SHA256",
+    "public_key": "302a300506032b65700321008d915120aa929c8bb580f96303a4a26afa4b099146b71eee0d04abb8c4715284",
+    "signature": "43e654e08328c56a46122beedd81fca2d0ee93ff0053eec065c2d6b6f01c0acc4dd5111c17b5cb11d46f3332a4a85edf238150df01bcd22ad8bc1bdab6fdc90d"
+  },
+  "receipts": [],
+  "outcome": {
+    "basis": "RESULTSET"
+  },
+  "resultset_present": true
+}

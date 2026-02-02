@@ -1,0 +1,4 @@
+{
+  "profile": "crypto-v2-ed25519",
+  "description": "Signature must not verify under wrong public key"
+}

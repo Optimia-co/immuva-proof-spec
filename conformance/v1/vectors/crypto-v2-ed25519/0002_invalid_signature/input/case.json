@@ -1,0 +1,11 @@
+{
+  "canonical_event": "{\"action\":\"transfer\",\"amount\":100,\"asset\":\"USD\"}",
+  "signing": {
+    "crypto_suite": "IMMUVAv2-ED25519-SHA256",
+    "public_key": "302a300506032b65700321008d915120aa929c8bb580f96303a4a26afa4b099146b71eee0d04abb8c4715284",
+    "signature": "deadbeef"
+  },
+  "receipts": [],
+  "outcome": { "basis": "RESULTSET" },
+  "resultset_present": true
+}
