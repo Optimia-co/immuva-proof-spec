@@ -4,7 +4,7 @@
   "outcome": { "value": "success", "basis": "R1" },
   "pointers": { "action_id": "act_0018" },
   "canonical_events": [
-    "{\"kind\":\"test.event\",\"event_id\":\"evt_0018_A\"}",
-    "{\"kind\":\"test.event\",\"event_id\":\"evt_0018_B\"}"
+    "{\"kind\":\"test.event\",\"action_id\":\"act_0018\",\"event_id\":\"evt_0018\",\"payload\":{\"v\":1}}",
+    "{\"kind\":\"test.event\",\"action_id\":\"act_0018\",\"event_id\":\"evt_0018\",\"payload\":{\"v\":2}}"
   ]
 }
