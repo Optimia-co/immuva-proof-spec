@@ -1,44 +1,23 @@
 {
   "items": [
-    {
-      "code": "RECEIPT_KIND_NOT_ALLOWED",
-      "description": "A receipt kind not present in the allowed registry was encountered."
-    },
-    {
-      "code": "RECEIPT_LATE_AFTER_NON_CLOSABLE",
-      "description": "A receipt was observed after a NON_CLOSABLE signal."
-    },
-    {
-      "code": "OUTCOME_BASIS_NOT_ALLOWED",
-      "description": "An outcome claims a basis that is not allowed (e.g. ENV_ATTEST)."
-    },
-    {
-      "code": "SIGNATURE_INVALID",
-      "description": "The provided signature does not match the canonical event."
-    },
-    {
-      "code": "KEY_BINDING_MISMATCH",
-      "description": "The signing key does not match the bound public key."
-    },
-    {
-      "code": "NON_EQUIVOCATION_VIOLATION",
-      "description": "Multiple distinct canonical events were detected for the same identity."
-    },
-    {
-      "code": "RESULTSET_MISSING",
-      "description": "A verdict was attempted without a ResultSet being present."
-    },
-    {
-      "code": "EVIDENCE_INSUFFICIENT",
-      "description": "The effective evidence does not meet the required threshold."
-    },
-    {
-      "code": "EVIDENCE_UNQUALIFIED",
-      "description": "Evidence was marked as not qualified."
-    },
-    {
-      "code": "FSM_VIOLATION",
-      "description": "The sequence of events violates the finite-state machine rules."
-    }
+    { "code": "RECEIPT_KIND_NOT_ALLOWED", "severity": "invalid", "description": "A receipt kind is not in the allowlist." },
+    { "code": "RECEIPT_LATE_AFTER_NON_CLOSABLE", "severity": "invalid", "description": "A receipt was present after NON_CLOSABLE." },
+    { "code": "OUTCOME_BASIS_NOT_ALLOWED", "severity": "invalid", "description": "Outcome basis uses a forbidden receipt kind (e.g. ENV_ATTEST)." },
+
+    { "code": "SIGNATURE_INVALID", "severity": "invalid", "description": "Signature does not match sha256(canonical_event) for v1." },
+    { "code": "KEY_BINDING_MISMATCH", "severity": "invalid", "description": "Signing public_key does not match bound public_key." },
+
+    { "code": "NON_EQUIVOCATION_VIOLATION", "severity": "invalid", "description": "More than one distinct canonical event exists for the same event identity scope." },
+
+    { "code": "RESULTSET_MISSING", "severity": "pending", "description": "No resultset is present; verifier cannot conclude." },
+    { "code": "RESULTSET_MISSING_BUT_TERMINAL", "severity": "invalid", "description": "No resultset, but a terminal signal was present (attempt to conclude)." },
+
+    { "code": "EVIDENCE_MISSING", "severity": "invalid", "description": "Resultset present but evidence is missing." },
+    { "code": "EVIDENCE_NOT_QUALIFIED", "severity": "awaiting_evidence", "description": "Evidence is not qualified; requires stronger evidence or NON_CLOSABLE." },
+    { "code": "EVIDENCE_REQUIRED_NOT_MET", "severity": "awaiting_evidence", "description": "Effective evidence rank is below required." },
+
+    { "code": "OUTCOME_BASIS_CONFLICT", "severity": "contested", "description": "Outcome basis conflicts with effective evidence." },
+
+    { "code": "NON_CLOSABLE_SIGNAL", "severity": "non_closable", "description": "NON_CLOSABLE receipt indicates action cannot be closed with available evidence." }
   ]
 }
