@@ -1,44 +1,40 @@
 {
-  "manifest_version": "1.0.0",
-  "created_at": "2026-02-01T00:00:00Z",
-  "spec_version": "v1.0.0",
-  "registries_version": "1.0.0",
   "files": [
     {
+      "path": "crypto_suites.json",
+      "sha256": "8c31bb19222358b1342fd86f7e030d4003e5021ec87ca16e47dad0ad15abd2a6"
+    },
+    {
       "path": "kinds.json",
-      "sha256": "48ab55d7b0d09b005edf61d308f6774f0c8c1e0a00540171d348b8ba04311639"
+      "sha256": "5a0c1e4dc4cc2a67ef8e9c1c5850ffdcb01b9d56f1f7e9d52a97e4c156703425"
     },
     {
       "path": "link_relations.json",
       "sha256": "49acd85776f15025c1895dd35fb96f4bc174a8f31802d1ba3c2961bd97bf7a33"
     },
     {
-      "path": "violation_codes.json",
-      "sha256": "dd11a9d6717fd9938e1032a26d0c9a442f98475968102faad2c222a8639ded9b"
-    },
-    {
-      "path": "receipt_types.json",
-      "sha256": "8736beeab1da1459414848cd5fbf90ddf66d9674db69d59128477de7afded01e"
+      "path": "policy_suites.json",
+      "sha256": "e1ee0c058ed5d26c587b83a24eb3dd293c774823a9aa126b30b2d4fa5f8de35c"
     },
     {
       "path": "proxy_kinds.json",
       "sha256": "5909fb234630fe2d8fd80a6f58470a76f84a6dcea48e0d55b6fee866de0caa32"
     },
     {
-      "path": "subject_ref_schema.json",
-      "sha256": "cbe38a17ccd498fe5d28f54a16bb6cb5e0da825a975e6db2c3834d74a430c210"
+      "path": "receipt_types.json",
+      "sha256": "8736beeab1da1459414848cd5fbf90ddf66d9674db69d59128477de7afded01e"
     },
     {
-      "path": "crypto_suites.json",
-      "sha256": "cfbb751340d51307c8ee50fd5646ce59d6dfb950dbe1667245cd7cd10751cac1"
+      "path": "subject_ref_schema.json",
+      "sha256": "063161662e5d40105de9e4c765b80b47d07fb82ef5359f6de58b418d8897917b"
     },
     {
       "path": "tl_params.json",
-      "sha256": "6370578a93be322909856904c2ef63a68ea197addeac8660739cfb35f040f7a0"
+      "sha256": "5d0fc872d9d0a91c4709caa444e34579e93444a2449166f6d3c516092c9f6b8a"
     },
     {
-      "path": "policy_suites.json",
-      "sha256": "e1ee0c058ed5d26c587b83a24eb3dd293c774823a9aa126b30b2d4fa5f8de35c"
+      "path": "violation_codes.json",
+      "sha256": "58d80425213a5c9249b433728dadaf1e47c66575498cdff3f273288c2c1219ee"
     }
   ]
 }

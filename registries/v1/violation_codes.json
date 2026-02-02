@@ -1,6 +1,44 @@
 {
-  "registry": "violation_codes",
-  "registry_version": "1.0.0",
-  "spec_version": "v1.0.0",
-  "items": []
+  "items": [
+    {
+      "code": "RECEIPT_KIND_NOT_ALLOWED",
+      "description": "A receipt kind not present in the allowed registry was encountered."
+    },
+    {
+      "code": "RECEIPT_LATE_AFTER_NON_CLOSABLE",
+      "description": "A receipt was observed after a NON_CLOSABLE signal."
+    },
+    {
+      "code": "OUTCOME_BASIS_NOT_ALLOWED",
+      "description": "An outcome claims a basis that is not allowed (e.g. ENV_ATTEST)."
+    },
+    {
+      "code": "SIGNATURE_INVALID",
+      "description": "The provided signature does not match the canonical event."
+    },
+    {
+      "code": "KEY_BINDING_MISMATCH",
+      "description": "The signing key does not match the bound public key."
+    },
+    {
+      "code": "NON_EQUIVOCATION_VIOLATION",
+      "description": "Multiple distinct canonical events were detected for the same identity."
+    },
+    {
+      "code": "RESULTSET_MISSING",
+      "description": "A verdict was attempted without a ResultSet being present."
+    },
+    {
+      "code": "EVIDENCE_INSUFFICIENT",
+      "description": "The effective evidence does not meet the required threshold."
+    },
+    {
+      "code": "EVIDENCE_UNQUALIFIED",
+      "description": "Evidence was marked as not qualified."
+    },
+    {
+      "code": "FSM_VIOLATION",
+      "description": "The sequence of events violates the finite-state machine rules."
+    }
+  ]
 }

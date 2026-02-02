@@ -1,6 +1,7 @@
 {
-  "registry": "tl_params",
-  "registry_version": "1.0.0",
-  "spec_version": "v1.0.0",
-  "params": {}
+  "params": {
+    "hash": "sha256",
+    "tree": "merkle",
+    "time_window": "unspecified"
+  }
 }
