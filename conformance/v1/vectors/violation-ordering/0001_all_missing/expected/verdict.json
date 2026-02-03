@@ -1,0 +1,14 @@
+{
+  "status": "INVALID",
+  "violations": [
+    {
+      "code": "KEY_BINDING_REQUIRED"
+    },
+    {
+      "code": "TIME_ANCHOR_REQUIRED"
+    },
+    {
+      "code": "TRANSPARENCY_LOG_REQUIRED"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "status": "INVALID",
+  "violations": [
+    {
+      "code": "TIME_ANCHOR_REQUIRED"
+    },
+    {
+      "code": "TRANSPARENCY_LOG_REQUIRED"
+    }
+  ]
+}

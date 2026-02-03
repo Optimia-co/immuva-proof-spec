@@ -1,0 +1,10 @@
+{
+  "profile": "violation-ordering",
+  "driver": "verify",
+  "args": [
+    "--proof-levels",
+    "--require-key-bound",
+    "--require-time-anchor",
+    "--require-transparency-log"
+  ]
+}
