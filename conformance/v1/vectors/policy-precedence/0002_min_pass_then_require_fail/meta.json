@@ -1,0 +1,10 @@
+{
+  "profile": "policy-precedence",
+  "driver": "verify",
+  "args": [
+    "--proof-levels",
+    "--min-proof-level", "TIME_ANCHORED",
+    "--require-key-bound",
+    "--require-time-anchor"
+  ]
+}

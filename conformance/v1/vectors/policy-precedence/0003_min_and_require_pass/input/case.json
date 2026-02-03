@@ -1,0 +1,19 @@
+{
+  "canonical_event": "hello",
+  "key_binding": {
+    "key_id": "id",
+    "public_key": "pk"
+  },
+  "time_anchor": {
+    "type": "RFC3161",
+    "anchor_id": "tsa",
+    "anchored_at": "2026-02-03T00:00:00Z",
+    "payload_hash": "2cf24dba5fb0a30e26e83b2ac5b9e29e1b161e5c1fa7425e73043362938b9824"
+  },
+  "resultset_present": true,
+  "evidence": {
+    "effective": "R1",
+    "required": "R1",
+    "qualified": true
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "status": "INVALID",
+  "violations": [
+    {
+      "code": "MIN_PROOF_LEVEL_NOT_MET"
+    }
+  ]
+}
