@@ -1,0 +1,8 @@
+{
+  "version": "1.0.0",
+  "min_proof_level": "TIME_ANCHORED",
+  "require": {
+    "key_bound": true,
+    "time_anchor": true
+  }
+}
