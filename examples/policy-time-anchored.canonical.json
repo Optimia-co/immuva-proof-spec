@@ -1,0 +1,1 @@
+{"issued_at":"2026-02-03T00:00:00Z","issuer":"Immuva Authority","min_proof_level":"TIME_ANCHORED","policy_id":"policy-time-anchored-v1","require":{"key_bound":true,"time_anchor":true},"version":"1.0.0"}
