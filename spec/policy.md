@@ -23,3 +23,16 @@ A policy MUST be a JSON object with the following fields:
 
 ## ProofLevel Ordering
 BASIC < KEY_BOUND < TIME_ANCHORED < TRANSPARENCY_LOGGED
+
+## Signing & Canonicalization (A12)
+
+Policies MUST be signed over their canonical JSON representation.
+
+- Canonicalization is defined by the Immuva Canonical JSON rules.
+- Canonicalization is performed independently by:
+  - the signer
+  - the verifier
+- A policy signature MUST be verified before policy enforcement.
+- The user MUST NOT manually canonicalize policies.
+
+Note: The reference CLI command `immuva policy sign` is defined but may not be implemented yet.
