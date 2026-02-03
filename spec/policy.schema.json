@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["version"],
+  "properties": {
+    "version": { "type": "string" },
+    "min_proof_level": {
+      "type": "string",
+      "enum": ["BASIC","KEY_BOUND","TIME_ANCHORED","TRANSPARENCY_LOGGED"]
+    },
+    "require": {
+      "type": "object",
+      "properties": {
+        "key_bound": { "type": "boolean" },
+        "time_anchor": { "type": "boolean" },
+        "transparency_log": { "type": "boolean" }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}
