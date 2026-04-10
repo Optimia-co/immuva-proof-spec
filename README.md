@@ -1,3 +1,6 @@
+Reference implementation: `@immuva/sdk@0.2.0`  
+Conformance: 20/20 tests passing
+
 # immuva-proof-spec
 
 Repo **normatif** pour **Immuva v1**.
